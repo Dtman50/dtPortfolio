@@ -22,7 +22,7 @@ function AboutMe() {
                         className="rounded-2xl h-3/4 w-3/4 mb-6 md:h-full md:w-full"
                     />
                 </div>
-                <div className="aboutMe-excerpt tracking-wide text-sm/loose text-center md:text-lg/loose">
+                <div className="aboutMe-excerpt tracking-wide text-sm/loose text-center md:pl-10 md:text-left md:text-lg/loose">
 
                     <p> I am a dynamic and motivated Software Development Engineer (SDE) with a strong commitment
                         to driving innovation and delivering high-quality solutions. Seeking to leverage expertise

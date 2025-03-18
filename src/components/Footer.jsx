@@ -1,7 +1,9 @@
 import { React, useState, useRef } from "react";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { IoLogoGithub } from "react-icons/io5";
+import { MdEmail } from "react-icons/md";
 import emailjs from '@emailjs/browser';
+import { RiErrorWarningFill } from "react-icons/ri";
 
 function Footer() {
 
@@ -9,6 +11,7 @@ function Footer() {
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
+    const myEmail = "mailto:dariustaylor17@gmail.com";
 
     const form = useRef();
 
@@ -53,8 +56,16 @@ function Footer() {
                         <span className="text-3xl uppercase text-lime-600">you.</span>
                     </p>
                     <div className="social-media-icons flex gap-3 text-2xl">
-                        <IoLogoLinkedin className="footer-linkedin text-lime-600 cursor-pointer" />
-                        <IoLogoGithub className="footer cursor-pointer" />
+                        <a href="https://www.linkedin.com/in/darius-taylor-1bb81120b/" target="_blank">
+                            <IoLogoLinkedin className="footer-linkedin text-lime-600 cursor-pointer" />
+                        </a>
+                        <a href="https://github.com/Dtman50" target="_blank">
+                            <IoLogoGithub className="footer cursor-pointer" />
+                        </a>
+                        <a href={myEmail} target="_blank">
+                            <MdEmail className="footer-linkedin text-lime-600 cursor-pointer" />
+                        </a>
+
                     </div>
                 </div>
                 <div className="footer-contactForm">
@@ -76,7 +87,6 @@ function Footer() {
                                             onChange={(e) => setFirstName(e.target.value)}
                                             className="block w-full rounded-md bg-zinc-100 px-3 py-1.5 text-base text-gray-400 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-lime-500 sm:text-sm/6"
                                         />
-
                                     </div>
                                 </div>
 
@@ -141,6 +151,7 @@ function Footer() {
                             <button
                                 type="submit"
                                 className="rounded-md bg-lime-700 px-3 py-2 text-sm font-semibold text-zinc-100 shadow-xs hover:bg-lime-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime-500 cursor-pointer"
+                                // onClick={validateForm}
                             >
                                 Submit
                             </button>
