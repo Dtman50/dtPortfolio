@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+
+/**
+------ General STYLES ------
+**/
+
+html {
+    @apply scroll-smooth
+}
+
+.spacer {
+    @apply my-15
+}
+
+
+/**
+------ NAV STYLES ------
+**/
+
+
+.nav {
+    @apply flex justify-between items-center fixed top-0 left-0 w-full 
+    h-20 z-40 bg-gradient-to-b from-gray-950 to-gray-950/50
+}
+
+
+.navbar {
+    @apply absolute top-full mt-2 right-0 min-w-40 p-2
+    bg-neutral-950 border-b border-b-white/20 rounded-2xl ring-inset
+    ring-1 ring-zinc-50/5 scale-90 isolate blur-sm opacity-0 invisible
+    md:static md:flex md:items-center md:mt-0 md:opacity-100 md:blur-none md:visible
+    md:scale-100 backdrop-blur-2xl
+    
+}
+
+.navbar.active {
+    @apply opacity-100 scale-100 blur-none visible
+}
+
+.nav-link {
+    @apply flex gap-2 items-center h-9 px-4 text-sm font-medium 
+    tracking-wide text-lime-600/50 hover:text-zinc-50
+    transition-colors
+}
+
+.nav-link.active {
+    @apply text-zinc-50 duration-500
+}
+
+.navbar .active-box {
+    @apply absolute bg-lime-700
+    rounded-lg -z-10 duration-500 text-zinc-50/50
+}
+
+/* Menu btn */
+
+
+.menu-btn {
+    @apply w-10 h-10 grid place-items-center bg-lime-700/10 cursor-pointer 
+    rounded-md ring-inset ring-1 ring-lime-700/[0.04] backdrop-blur-2xl 
+    hover:bg-lime-600/15 transition-transform active:scale-95 md:hidden
+}
+
+
+/**
+------ HOME STYLES ------
+**/
+
+.container {
+    @apply px-4 pt-20 pb-18 mx-auto lg:px-8 xl:max-w-6xl
+}
+
+
+
+/**
+------ About Me STYLES ------
+**/
+
+.about-me {
+    @apply transition-all ease-in from-0% to-100%
+}
