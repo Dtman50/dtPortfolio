@@ -1,4 +1,6 @@
 import profile from "../assets/DTphoto.jpeg";
+import { FaDownload } from "react-icons/fa6";
+import SoftwareResume from "../assets/Resumes/Resume_SDE_DT-2.pdf"
 
 function AboutMe() {
     return (
@@ -7,7 +9,7 @@ function AboutMe() {
                 className="flex justify-center text-4xl mb-6 md:text-6xl md:mb-12 font-semibold"
             >
                 <h1>
-                <span className='underline decoration-wavy decoration-lime-700'>About</span> <sp />
+                    <span className='underline decoration-wavy decoration-lime-700'>About</span> <sp />
                     <span className="text-lime-700">
                         ME
                     </span>
@@ -29,6 +31,19 @@ function AboutMe() {
                         in software development and test automation to contribute effectively to the innovative projects,
                         where I can thrive in a fast-paced, collaborative environment. I look forward to joining your team!
                     </p>
+                    <button
+                        className="h-11 bg-lime-700 rounded-lg w-30 mt-3 font-medium text-sm md:hidden"
+                    >
+                        <a
+                            download="Software Resume"
+                            href={SoftwareResume}
+                            className="flex items-center gap-2 justify-center"
+                        >
+                            <h1 className="">SDE Resume </h1><FaDownload /> 
+                        </a>
+                    </button>
+
+
                 </div>
             </div>
             <div className="spacer"></div>

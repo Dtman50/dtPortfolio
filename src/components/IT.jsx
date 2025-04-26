@@ -2,6 +2,8 @@ import aPlus from "../assets/IT/aPlus.svg"
 import projectPlus from "../assets/IT/projectPlus.svg"
 import googleIT from "../assets/IT/googleIT.svg"
 import itil from "../assets/IT/itil.svg"
+import { FaDownload } from "react-icons/fa6";
+import ITResume from "../assets/Resumes/Resume_IT_DKT.pdf"
 
 const skills = [
     "Active Directory",
@@ -64,7 +66,22 @@ function IT() {
                     </div>
 
                 </div>
+                
             </div>
+            <div className="flex justify-center">
+                    <button
+                        className="mt-0 h-11 bg-lime-600 rounded-lg w-30 md:mt-4 font-medium text-sm"
+                    >
+                        <a
+                            download="IT Resume"
+                            href={ITResume}
+                            className="flex items-center h-11 gap-2 justify-center"
+                        >
+                            <h1 className="">IT Resume </h1><FaDownload />
+                        </a>
+                    </button>
+                </div>
+
             <div className="spacer"></div>
 
         </section>

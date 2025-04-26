@@ -8,6 +8,8 @@ import { GoProjectRoadmap } from "react-icons/go";
 import { GrContact } from "react-icons/gr";
 import { IoClose } from "react-icons/io5";
 import { FaComputer } from "react-icons/fa6";
+import { FaDownload } from "react-icons/fa6";
+import SoftwareResume from "../assets/Resumes/Resume_SDE_DT-2.pdf"
 
 function Nav() {
     const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +21,7 @@ function Nav() {
         activeBox.current.style.width = lastActiveLink.current.offsetWidth + 'px';
         activeBox.current.style.height = lastActiveLink.current.offsetHeight + 'px';
     }
-    
+
     useEffect(initActiveBox, [])
     window.addEventListener('resize', initActiveBox);
 
@@ -81,7 +83,7 @@ function Nav() {
                             className="menu-btn"
                             onClick={() => setIsOpen((prev) => !prev)}
                         >
-                            {isOpen ?  <IoClose /> : <IoMenu />}
+                            {isOpen ? <IoClose /> : <IoMenu />}
                         </button>
                         <div className={'navbar  ' + (isOpen ? 'active' : '')}>
                             {
@@ -95,7 +97,7 @@ function Nav() {
                                     >
                                         <Icon />
                                         {title}
-                                        
+
 
                                     </a>
                                 ))
@@ -106,6 +108,14 @@ function Nav() {
                         </div>
 
                     </div>
+                    <a
+                        download="Software Resume"
+                        href={SoftwareResume}
+                        className="hidden md:flex items-center h-11 px-4 bg-lime-700 tracking-wide text-sm font-medium rounded-lg"
+                    >
+                        <h1 className="mr-2">SDE Resume</h1>
+                        <FaDownload />
+                    </a>
 
                     {/* {routes.map((route, index) => {
                         const { Icon, href, title } = route;
