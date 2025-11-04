@@ -3,7 +3,7 @@ import projectPlus from "../assets/IT/projectPlus.svg"
 import googleIT from "../assets/IT/googleIT.svg"
 import itil from "../assets/IT/itil.svg"
 import { FaDownload } from "react-icons/fa6";
-import ITResume from "../assets/Resumes/Resume_IT_DKT.pdf"
+import ITResume from "../assets/Resumes/IT_DariusKT.pdf"
 
 const skills = [
     "Active Directory",
